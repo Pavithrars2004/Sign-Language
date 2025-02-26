@@ -1,0 +1,134 @@
+/* General Styles */
+.home-container {
+    font-family: 'Poppins', sans-serif;
+    background: #f9f9f9;
+    padding: 40px 10%;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 12px;
+    margin-bottom: 50px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .cta-button {
+    background-color: white;
+    color: #007bff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background-color: #ffcc00;
+    color: black;
+  }
+  
+  /* Feature Cards */
+  .cards-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    width: 30%;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card h2 {
+    color: #0056b3;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .card button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .card button:hover {
+    background-color: #ffcc00;
+    color: black;
+  }
+  
+  /* Info Section */
+  .info-section {
+    background: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+  }
+  
+  .info-section h2 {
+    color: #0056b3;
+    margin-bottom: 15px;
+  }
+  
+  /* Benefits Section */
+  .benefits-section {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .benefits-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .benefit-item {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 22%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .benefit-item:hover {
+    transform: translateY(-5px);
+  }
+  

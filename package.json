@@ -3,13 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tensorflow-models/handpose": "^0.1.0",
+    "@tensorflow/tfjs": "^4.22.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "ajv": "^8.11.0",
+    "peerjs": "^1.5.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.29.0",
+    "react-scripts": "^5.0.1",
+    "socket.io-client": "^4.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -35,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack": "^5.98.0"
   }
 }

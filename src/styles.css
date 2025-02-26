@@ -1,0 +1,82 @@
+/* General Styling */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #003366;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+  }
+  
+  .nav-links a:hover {
+    opacity: 0.7;
+  }
+  
+  /* Page Container */
+  .page-container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Image Styling */
+  .image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Card */
+  .card {
+    background: #e3e7f1;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  /* Buttons */
+  .gradient-button {
+    display: block;
+    width: 80%;
+    padding: 15px;
+    margin: 15px auto;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: #003366;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+  }
+  
+  .gradient-button:hover {
+    transform: scale(1.05);
+    background: #002244;
+  }
+  
