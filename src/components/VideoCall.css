@@ -1,0 +1,52 @@
+.page-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .image {
+    width: 300px;
+    height: auto;
+    margin: 20px;
+  }
+  
+  .gradient-button {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .gradient-button:hover {
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
+  }
+  
+  .video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .webcam {
+    width: 640px;
+    height: 480px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+  }
+  
+  .end-call-button {
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .end-call-button:hover {
+    background: darkred;
+  }
+  
