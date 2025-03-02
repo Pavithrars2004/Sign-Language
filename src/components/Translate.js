@@ -1,10 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
+
+
 function Translate() {
   const navigate = useNavigate();
   const handleClick = ()=>{
     navigate("/texttosign");
   }
+  const handleClick1 = () => {
+    navigate("/voicetosign");
+  };
+  
+  
   return (
     <div className="page-container">
       <h1>🌍 Sign Language Translation</h1>
@@ -16,7 +24,7 @@ function Translate() {
       />
       <div className="buttons-container">
         <button className="gradient-button" >🖐️ Sign to Text</button>
-        <button className="gradient-button" >🎙️ Voice to Sign</button>
+        <button className="gradient-button" onClick={handleClick1} >🎙️ Voice to Sign</button>
         <button className="gradient-button" onClick={handleClick}>📝 Text to Sign</button>
       </div>
     </div>

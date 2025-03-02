@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 
 function Home() {
+  const [showModal, setShowModal] = useState(false);
+  const [quote, setQuote] = useState("");
+
+  const quotes = [
+    "Sign language is the noblest gift God has given to deaf people.",
+    "Learning sign language bridges gaps between worlds.",
+    "Sign language is not just a language; it's an expression of love.",
+    "Every sign tells a story, every gesture builds a connection.",
+    "Inclusivity starts with communication. Learn, sign, connect!"
+  ];
+
+  const openModal = () => {
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    setQuote(randomQuote);
+    setShowModal(true);
+  };
+
   return (
     <div className="home-container">
       {/* Hero Section */}
@@ -24,7 +41,7 @@ function Home() {
         <div className="card">
           <h2>🔤 Sign of the Day</h2>
           <p>Learn a new sign every day to enhance your skills.</p>
-          <button>View</button>
+          <button onClick={openModal}>View</button>
         </div>
 
         <div className="card">
@@ -50,6 +67,17 @@ function Home() {
           <div className="benefit-item">💼 Career Growth & Opportunities</div>
         </div>
       </section>
+
+      {/* Modal Component */}
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <h2>🔤 Sign of the Day</h2>
+            <p>{quote}</p>
+            <button className="close-button" onClick={() => setShowModal(false)}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

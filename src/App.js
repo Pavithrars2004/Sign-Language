@@ -6,7 +6,9 @@ import Translate from "./components/Translate";
 import VideoCall from "./components/VideoCall";
 import More from "./components/More";
 import TextToSign from "./components/TextToSign";
-
+//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import VoiceToSign from "./components/VoiceToSign"; ; // Ensure exact casing
+//import ARSignLearning from "../components/ARSignLearning";
 
 
 function App() {

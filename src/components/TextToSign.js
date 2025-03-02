@@ -26,7 +26,6 @@ function TextToSign() {
             });
             const data = await response.json();
             setKeywords(data.keyword_tokens);
-            console.log(data.keyword_tokens);
         } catch (error) {
             console.error("Error fetching keywords:", error);
         }
@@ -63,13 +62,7 @@ function TextToSign() {
 
     useEffect(() => {
         if (keywordQueue.length > 0) {
-            const playNextVideo = () => {
-                const currentKeyword = keywordQueue[0];
-                setURL(`/assets/${currentKeyword}.mp4`);
-                console.log(`Playing video for keyword: ${currentKeyword}`);
-            };
-
-            playNextVideo();
+            setURL(`/assets/${keywordQueue[0]}.mp4`);
         }
     }, [keywordQueue]);
 
@@ -77,32 +70,50 @@ function TextToSign() {
         setKeywordQueue((prevQueue) => {
             const updatedQueue = prevQueue.slice(1);
             if (updatedQueue.length > 0) {
-                const nextKeyword = updatedQueue[0];
-                setURL(`/assets/${nextKeyword}.mp4`);
-                console.log(`Playing next video for keyword: ${nextKeyword}`);
+                setURL(`/assets/${updatedQueue[0]}.mp4`);
             }
             return updatedQueue;
         });
     };
 
     return (
-        <div className="App">
+        <div className="container">
+            <h1 className="title">Text to Sign Language</h1>
+            <p className="description">
+                Convert text or speech into sign language videos easily.
+            </p>
             <form onSubmit={handleSubmit} className="form-container">
                 <input
                     type="text"
                     value={inputVal}
                     onChange={handleChange}
                     className="input-text"
+                    placeholder="Enter text here..."
                 />
-                
+                <div className="button-group">
+                    <button onClick={startListening} className="button record">
+                        🎤 Start Recording
+                    </button>
+                    <button onClick={stopListening} className="button stop">
+                        ✋ Stop Recording
+                    </button>
+                    <button type="submit" className="button submit">
+                        📤 Convert
+                    </button>
+                </div>
             </form>
-            <button onClick={startListening} className="button">Record</button>
-            <button onClick={stopListening} className="button">Stop Recording</button>
-            <button type="submit" className="button">Submit</button>
-            <ReactPlayer id="reactPlayer" url={URL} playing onEnded={handleEnded} className="react-player"/>
+            {URL && (
+                <div className="video-container">
+                    <ReactPlayer
+                        url={URL}
+                        playing
+                        onEnded={handleEnded}
+                        className="react-player"
+                    />
+                </div>
+            )}
         </div>
     );
-
 }
 
 export default TextToSign;
